@@ -1,3 +1,8 @@
+<p align="center">
+    <a href="https://openwit.io" target="_blank"><img src="https://raw.githubusercontent.com/openwit-oss/openwit/main/public/image/heading-banner.png" alt="OpenWit - Distributed Observability Platform" style="width: 100%;"></a>
+    <br />
+</p>
+
 # OpenWit - Distributed Observability Data Platform
 
 OpenWit is a high-performance, distributed observability data platform designed to ingest, store, and query telemetry data (traces, logs, metrics) at scale. Built in Rust, it provides a robust microservices architecture with specialized node types for different aspects of data processing.
@@ -6,36 +11,11 @@ OpenWit is a high-performance, distributed observability data platform designed 
 
 OpenWit uses a microservices architecture with specialized node types that work together to provide a complete observability solution:
 
-```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Kafka     │     │  HTTP/gRPC  │     │   Metrics   │
-│   Topics    │     │   Clients   │     │   Sources   │
-└──────┬──────┘     └──────┬──────┘     └──────┬──────┘
-       │                   │                   │
-       └───────────────────┴───────────────────┘
-                           │
-                    ┌──────▼──────┐
-                    │ Proxy Node  │ (Load Balancer)
-                    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │  Ingestion  │ (Data Reception)
-                    │    Node     │
-                    └──────┬──────┘
-                           │
-                ┌──────────┴──────────┐
-                │                     │
-         ┌──────▼──────┐      ┌──────▼──────┐
-         │   Storage   │      │   Indexer   │
-         │    Node     │      │    Node     │
-         └─────────────┘      └─────────────┘
-                │                     │
-                └──────────┬──────────┘
-                    ┌──────▼──────┐
-                    │   Search    │ (Query Engine)
-                    │    Node     │
-                    └─────────────┘
-```
+<p align="center">
+    <a href="https://docs.openwit.io/" target="_blank"><img src="https://raw.githubusercontent.com/openwit-oss/openwit/main/public/image/architecture-flow.png" alt="OpenWit - Data Flow Architecture" style="width: 100%;"></a>
+    <br />
+    <br />
+</p>
 
 ## 📋 Components
 
